@@ -2,6 +2,7 @@ jobs:
   - job: get_impacted_area
     displayName: "Get impacted area"
     timeoutInMinutes: 240
+    cancelTimeoutInMinutes: 1
     continueOnError: false
     pool: sonic-ubuntu-1c
     steps:
@@ -14,6 +15,7 @@ jobs:
     variables:
       TEST_SCRIPTS: $[ dependencies.get_impacted_area.outputs['SetVariableTask.TEST_SCRIPTS'] ]
     timeoutInMinutes: 240
+    cancelTimeoutInMinutes: 1
     continueOnError: false
     pool: sonic-ubuntu-1c
     steps:
@@ -42,6 +44,7 @@ jobs:
     variables:
       TEST_SCRIPTS: $[ dependencies.get_impacted_area.outputs['SetVariableTask.TEST_SCRIPTS'] ]
     timeoutInMinutes: 240
+    cancelTimeoutInMinutes: 1
     continueOnError: false
     pool: sonic-ubuntu-1c
     steps:
@@ -71,6 +74,7 @@ jobs:
     variables:
       TEST_SCRIPTS: $[ dependencies.get_impacted_area.outputs['SetVariableTask.TEST_SCRIPTS'] ]
     timeoutInMinutes: 240
+    cancelTimeoutInMinutes: 1
     continueOnError: false
     pool: sonic-ubuntu-1c
     steps:
@@ -101,6 +105,7 @@ jobs:
     variables:
       TEST_SCRIPTS: $[ dependencies.get_impacted_area.outputs['SetVariableTask.TEST_SCRIPTS'] ]
     timeoutInMinutes: 240
+    cancelTimeoutInMinutes: 1
     continueOnError: false
     pool: sonic-ubuntu-1c
     steps:
@@ -132,6 +137,7 @@ jobs:
     variables:
       TEST_SCRIPTS: $[ dependencies.get_impacted_area.outputs['SetVariableTask.TEST_SCRIPTS'] ]
     timeoutInMinutes: 240
+    cancelTimeoutInMinutes: 1
     continueOnError: false
     pool: sonic-ubuntu-1c
     steps:
@@ -161,6 +167,7 @@ jobs:
     variables:
       TEST_SCRIPTS: $[ dependencies.get_impacted_area.outputs['SetVariableTask.TEST_SCRIPTS'] ]
     timeoutInMinutes: 240
+    cancelTimeoutInMinutes: 1
     continueOnError: false
     pool: sonic-ubuntu-1c
     steps:
@@ -192,6 +199,7 @@ jobs:
     variables:
       TEST_SCRIPTS: $[ dependencies.get_impacted_area.outputs['SetVariableTask.TEST_SCRIPTS'] ]
     timeoutInMinutes: 240
+    cancelTimeoutInMinutes: 1
     continueOnError: false
     pool: sonic-ubuntu-1c
     steps:
