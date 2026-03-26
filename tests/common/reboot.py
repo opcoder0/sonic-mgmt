@@ -806,8 +806,8 @@ def ssh_connection_with_retry(localhost, host_ip, port, delay, timeout):
 
 def collect_mgmt_config_by_console(duthost, localhost):
     logger.info("check if dut is pingable")
-    # Use ping6 for IPv6 addresses, ping for IPv4
-    ping_cmd = "ping6" if is_ipv6_address(str(duthost.mgmt_ip)) else "ping"
+    # Use ping -6 for IPv6 so the check works on newer distros where ping6 may not exist.
+    ping_cmd = "ping -6" if is_ipv6_address(str(duthost.mgmt_ip)) else "ping"
     localhost.shell(f"{ping_cmd} -c 5 {duthost.mgmt_ip}", module_ignore_errors=True)
 
     logger.info("Start: collect mgmt config by console")

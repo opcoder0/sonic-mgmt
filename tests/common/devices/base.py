@@ -81,6 +81,11 @@ class AnsibleHostBase(object):
                 self._mgmt_ipv4 = ansible_host
                 logger.debug("IPv6-only management mode: using %s as mgmt_ip for %s", ansible_hostv6, hostname)
             else:
+                logger.warning(
+                    "IPv6-only mode requested but ansible_hostv6 not defined for %s, "
+                    "falling back to IPv4.",
+                    hostname,
+                )
                 self.mgmt_ip = ansible_host
                 self.mgmt_ipv6 = ansible_hostv6
         self.hostname = hostname
