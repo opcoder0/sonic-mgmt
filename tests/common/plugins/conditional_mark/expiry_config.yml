@@ -1,0 +1,10 @@
+# This file is used by workflow scripts to determine when to expire skips for
+# tests specified in conditional mark files.
+
+expiry_config:
+  # Expiry days for each priority level.
+  p3_label_expiry_days: 90
+  p2_label_expiry_days: 60
+  p1_label_expiry_days: 30
+  p0_label_expiry_days: 15
+  warning_days: [30, 14, 7]  # Days before expiry to send warnings
